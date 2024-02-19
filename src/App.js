@@ -1,7 +1,7 @@
 import './App.css';
-import Home from "./components/Home";
-import Login from "./components/Login";
-import Register from "./components/Register";
+import Home from "./components/Home/Home";
+import Login from "./components/Auth/Login";
+import Register from "./components/Auth/Register";
 import React, { Component } from 'react';
 import {HashRouter, Link, Route, Routes} from "react-router-dom";
 
@@ -18,7 +18,6 @@ function App() {
   return (
       <>
           <HashRouter>
-
               <Routes>
                   <Route path='/' element={<Home/>}/>
                   <Route path='/logowanie' element={<Login/>}/>

@@ -1,14 +1,13 @@
 import HomeHeader from "./HomeHeader";
-import HomeHeaderBody from "./HomeHeaderBody";
+import HomeThreeColumns from "./HomeThreeColumns";
 
 import React from "react";
 const Home = () =>{
     return(
-        <>
-            <h1>Home</h1>
+        <div className="home">
             <HomeHeader/>
-            <HomeHeaderBody />
-        </>
+            <HomeThreeColumns />
+        </div>
     )
 }
 

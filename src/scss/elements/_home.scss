@@ -1,0 +1,118 @@
+.home{
+  *{
+    box-sizing: border-box;
+  }
+  .home__header{
+    display: flex;
+    flex-direction: row;
+  }
+  .header__left{
+    width: 50%;
+    background-image: url("../../assets/Home-Hero-Image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    height: 100vh;
+  }
+  .header__right{
+    width: 50%;
+    text-align: right;
+    padding-top: 2rem;
+    padding-right: 5rem;
+    .login__menu{
+      margin: 0 0 2rem 0;
+      .nav__element{
+        box-sizing: border-box;
+        margin: 0 0 0 1rem;
+        padding: 0.5rem;
+        color: $color-gray;
+        text-decoration: none;
+        font-size: 14px;
+        &:hover{
+          outline: 1px  $color-yellow solid;
+        }
+      }
+    }
+
+    .nav__menu{
+      padding-left: 2rem;
+      text-align: right;
+      margin-bottom: 12rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .nav__element{
+        box-sizing: border-box;
+        margin: 0 0 0 0.3rem;
+        padding: 0.7rem;
+        color: $color-gray;
+        text-decoration: none;
+        font-size: 18px;
+        &:hover{
+          outline: 1px  $color-gray solid;
+          cursor: pointer;
+        }
+      }
+
+    }
+    .header__body{
+      text-align: center;
+      font-size: 38px;
+      color: $color-black;
+      .header__ornament{
+        margin: 2rem 0 2rem 0;
+        display: inline-block;
+        height: 3rem;
+        width: 16rem;
+        background-image: url("../../assets/Decoration.svg");
+        background-repeat: no-repeat;
+      }
+
+      .header__menu{
+        display: flex;
+        justify-content: space-around;
+        .nav__button__big{
+          box-sizing: border-box;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: 300;
+          color: $color-black;
+          text-align: center;
+          width: 310px;
+          height: 120px;
+          border: solid 1px $color-black;
+          text-decoration: none;
+
+        }
+      }
+
+    }
+  }
+
+
+  .home__threecolumns{
+    color: $color-brown;
+    background-image: url("../../assets/3 Columns Background.png");
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 4em;
+    padding-bottom: 4em;
+
+    .home__column{
+      text-align: center;
+      width: 20em;
+      .column__numeral{
+        font-size: 4em;
+      }
+      .column__title{
+        font-size: 1em;
+        margin: 1em;
+      }
+      .column__content{
+        font-size: 0.8em;
+      }
+    }
+  }
+}
