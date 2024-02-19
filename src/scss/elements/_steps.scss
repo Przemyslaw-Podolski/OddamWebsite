@@ -1,0 +1,83 @@
+.setps{
+  text-align: center;
+  .steps__title{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 37px;
+  }
+  .steps__ornament{
+    margin: 2rem 0 2rem 0;
+    display: inline-block;
+    height: 3rem;
+    width: 16rem;
+    background-image: url("../../assets/Decoration.svg");
+    background-repeat: no-repeat;
+  }
+  .steps__container{
+    background-color: $color-light-gray;
+    color: $color-black;
+    padding: 5rem 20rem 5rem 20rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .steps__element{
+    text-align: center;
+    width: 170px;
+    .steps__icon{
+      background-repeat: no-repeat;
+      display: inline-block;
+      height: 5.5rem;
+      width: 5rem;
+    }
+    .steps__subtitle{
+      margin-bottom: 0.6rem;
+    }
+
+    .steps__underline{
+      display: inline-block;
+      border-bottom: 3px $color-gray solid;
+      width: 4rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+  .element_1 {
+    .steps__icon {
+      background-image: url("../../assets/Icon-1.svg");
+    }
+  }
+  .element_2 {
+    .steps__icon {
+      background-image: url("../../assets/Icon-2.svg");
+    }
+  }
+  .element_3 {
+    .steps__icon {
+      background-image: url("../../assets/Icon-3.svg");
+    }
+  }
+  .element_4 {
+    .steps__icon {
+      background-image: url("../../assets/Icon-4.svg");
+    }
+  }
+
+  .steps__button{
+    padding-top: 1.4rem;
+    margin: 3rem 0 4rem;
+    outline: 1px $color-black solid;
+    display: inline-block;
+    width: 250px;
+    height: 130px;
+
+    .nav__button__big{
+      font-size: 36px;
+      font-weight: 300;
+      color: $color-black;
+      text-decoration: none;
+
+    }
+  }
+
+}
