@@ -1,5 +1,7 @@
 import './App.css';
 import Home from "./components/Home";
+import Login from "./components/Login";
+import Register from "./components/Register";
 import React, { Component } from 'react';
 import {HashRouter, Link, Route, Routes} from "react-router-dom";
 
@@ -16,12 +18,11 @@ function App() {
   return (
       <>
           <HashRouter>
-              <nav>
-                  <h3>Menu</h3>
-                  <Link to='/' className={"nav__element"}>Go To Home</Link>
-              </nav>
+
               <Routes>
                   <Route path='/' element={<Home/>}/>
+                  <Route path='/logowanie' element={<Login/>}/>
+                  <Route path='/rejestracja' element={<Register/>}/>
                   <Route path="*" element={<NotFound/>}/>
               </Routes>
           </HashRouter>
