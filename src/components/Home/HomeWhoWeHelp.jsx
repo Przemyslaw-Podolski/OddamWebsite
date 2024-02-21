@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 const HomeWhoWeHelp = () => {
     const [organization, setOrganization] = useState(0);
     const [offset, setOffset] = useState(0);
     const [itemsCnt, setItemsCnt] = useState(9);
     const [orgType, setOrgType] = useState("Fundacja");
+    const [btnClass, setBtnClass] = useState(["small_btn set", "small_btn unset", "small_btn unset" ])
 
     const charityList = [
         {
@@ -130,14 +131,17 @@ const HomeWhoWeHelp = () => {
 
     function handleOffset0(){
         setOffset(0);
+        setBtnClass(["small_btn set", "small_btn unset", "small_btn unset" ]);
     }
 
     function handleOffset3(){
         setOffset(3);
+        setBtnClass(["small_btn unset", "small_btn set", "small_btn unset" ]);
     }
 
     function handleOffset6(){
         setOffset(6);
+        setBtnClass(["small_btn unset", "small_btn unset", "small_btn set" ]);
     }
 
     return(
@@ -177,15 +181,15 @@ const HomeWhoWeHelp = () => {
             </div>
             {itemsCnt > 6 ?
                 <div className="small__container">
-                    <button className="small_btn" onClick={handleOffset0} >1</button>
-                    <button className="small_btn" onClick={handleOffset3} >2</button>
-                    <button className="small_btn" onClick={handleOffset6} >3</button>
+                    <button className={btnClass[0]} onClick={handleOffset0} >1</button>
+                    <button className={btnClass[1]}  onClick={handleOffset3} >2</button>
+                    <button className={btnClass[2]}  onClick={handleOffset6} >3</button>
                 </div>
                 :
                 itemsCnt > 3 ?
                     <div className="small__container">
-                        <button className="small_btn" onClick={handleOffset0} >1</button>
-                        <button className="small_btn" onClick={handleOffset3} >2</button>
+                        <button className={btnClass[0]} onClick={handleOffset0} >1</button>
+                        <button className={btnClass[1]} onClick={handleOffset3} >2</button>
                     </div>
                     :
                 <div className="small__container"></div>
