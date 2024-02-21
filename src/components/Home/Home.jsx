@@ -3,6 +3,7 @@ import HomeThreeColumns from "./HomeThreeColumns";
 import HomeSimpleSteps from "./HomeSimpleSteps";
 import React from "react";
 import HomeAbout from "./HomeAbout";
+import HomeContact from "./HomeContact";
 
 const Home = () =>{
     return(
@@ -11,6 +12,7 @@ const Home = () =>{
             <HomeThreeColumns />
             <HomeSimpleSteps />
             <HomeAbout />
+            <HomeContact />
         </div>
     )
 }

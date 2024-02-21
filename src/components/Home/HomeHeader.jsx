@@ -12,6 +12,10 @@ const HomeHeader = () =>{
         scroll.scrollTo(2400);
     }
 
+    function handleContact(){
+        scroll.scrollTo(3060);
+    }
+
     return(
         <div className="home__header">
             <div className="header__left"></div>
@@ -25,7 +29,7 @@ const HomeHeader = () =>{
                     <li className={"nav__element"} onClick={handleOCoChodzi}>O co chodzi?</li>
                     <li className={"nav__element"} onClick={handleONas}>O nas</li>
                     <li className={"nav__element"}>Fundacja i organizacja</li>
-                    <li className={"nav__element"}>Kontakt</li>
+                    <li className={"nav__element"} onClick={handleContact}>Kontakt</li>
                 </ul>
                 <HomeHeaderBody/>
             </div>
