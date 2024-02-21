@@ -11,8 +11,9 @@
     background-image: url("../../assets/Background-Contact-Form.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.3; // Adjust the opacity as needed
-    z-index: -1; // Ensures the background is behind all other content
+    background-position: top;
+    opacity: 0.3;
+    z-index: -1;
   }
   .contact__container{
     position: relative;
@@ -21,34 +22,119 @@
     left: 60vw;
     width: 30vw;
     .contact__title{
-      margin: 10rem 0 1rem 0;
+      padding: 10rem 0 1rem 0;
       font-size: 38px;
     }
     .contact__ornament{
       display: inline-block;
-      margin: 2rem 0 2rem 0;
+      margin: 2rem 0 4rem 0;
       height: 3rem;
       width: 16rem;
       background-image: url("../../assets/Decoration.svg");
       background-repeat: no-repeat;
     }
+
+    .contact__form{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;;
+      .form__container{
+        font-size: 16px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        input{
+          padding-top: 1rem;
+          padding-bottom: 0.2rem;
+          border: none;
+          border-bottom: $color-gray 1.2px solid;
+          width: 17rem;
+          margin-top: 0.6rem;
+          font-size: 18px;
+          color: $color-gray;
+        }
+        .form__name{
+          text-align: left;
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+        }
+        .form__email{
+          text-align: left;
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+        }
+        .form__subject {
+          margin-top: 1.5rem;
+          text-align: left;
+          width: 100%;
+
+          textarea {
+            width: 100%;
+            margin-top: 1rem;
+            height: 7rem;
+            font-size: 18px;
+            color: $color-gray;
+            font-family: $font-base;
+            padding-bottom: 0.2rem;
+            border: none;
+            border-bottom: $color-gray 1.2px solid;
+            resize: none;
+            background: none;
+          }
+        }
+
+      }
+      .form__button{
+        margin-top: 2rem;
+        background: none;
+        width: 150px;
+        height: 50px;
+        border: 1px $color-gray solid;
+        border-radius: 0;
+        align-self: flex-end;
+        font-size: 18px;
+        font-family: $font-base;
+        font-weight: 300;
+
+      }
+
+    }
   }
   .home__footer{
+    width: 50%;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 45%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 
-    .footer__facebook{
-      display: inline-block;
-      background-image: url("../../assets/Facebook.svg");
-      background-repeat: no-repeat;
-      width: 1.86rem;
-      height: 1.86rem;
+
+    .footer__icons{
+      display: flex;
+
+      .icons__facebook{
+        background-image: url("../../assets/Facebook.svg");
+        background-repeat: no-repeat;
+        width: 1.86rem;
+        height: 1.86rem;
+      }
+      .icons__instagram{
+        margin-left: 1rem;
+        background-image: url("../../assets/Instagram.svg");
+        background-repeat: no-repeat;
+        width: 1.86rem;
+        height: 1.86rem;
+      }
     }
-    .footer__instagram{
-      display: inline-block;
-      background-image: url("../../assets/Instagram.svg");
-      background-repeat: no-repeat;
-      width: 1.86rem;
-      height: 1.86rem;
-    }
+
+
+
+
   }
 
 }

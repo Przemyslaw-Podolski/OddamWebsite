@@ -6,23 +6,33 @@ const HomeContact = () => {
                 <h2 className="contact__title">Skontaktuj się z nami</h2>
                 <div className="contact__ornament"></div>
                 <form className="contact__form">
-                    <label htmlFor="name">Wpisz swoje imię</label>
-                    <input type="text" id="name" name="name" placeholder="Krzysztof..." />
 
-                    <label htmlFor="email">Wpisz swój email</label>
-                    <input type="email" id="email" name="email" placeholder="abc@xyz.com" />
+                    <div className="form__container">
+                        <div className="form__name">
+                            <label htmlFor="name">Wpisz swoje imię</label>
+                            <input type="text" id="name" name="name" placeholder="Krzysztof..." />
+                        </div>
+                        <div className="form__email">
+                            <label htmlFor="email">Wpisz swój email</label>
+                            <input type="email" id="email" name="email" placeholder="abc@xyz.com" />
+                        </div>
+                        <div className="form__subject">
+                            <label htmlFor="subject">Wpisz swoją wiadomość</label>
+                            <textarea id="subject" name="subject" placeholder={msgPlaceholder}></textarea>
+                        </div>
+                    </div>
 
-                    <label htmlFor="subject">Wpisz swoją wiadomość</label>
-                    <textarea id="subject" name="subject" placeholder={msgPlaceholder} style={{height:"200px"}}></textarea>
-
-                    <input type="submit" value="Wyślij"/>
+                    <input className="form__button" type="submit" value="Wyślij"/>
 
                 </form>
             </div>
             <footer className="home__footer">
                 <small className="footer__copyright">Copyright by Coders Lab</small>
-                <div className="footer__facebook"></div>
-                <div className="footer__instagram"></div>
+                <div className="footer__icons">
+                    <div className="icons__facebook"></div>
+                    <div className="icons__instagram"></div>
+                </div>
+
             </footer>
         </div>
     )
