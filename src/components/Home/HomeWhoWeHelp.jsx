@@ -108,6 +108,7 @@ const HomeWhoWeHelp = () => {
     function handleCharity(){
         setOrganization(0);
         setOffset(0);
+        setBtnClass(["small_btn set", "small_btn unset", "small_btn unset" ]);
         setOrgType("Fundacja");
         setItemsCnt(inputList[0].length);
         console.log("Organization code: ", organization);
@@ -116,6 +117,7 @@ const HomeWhoWeHelp = () => {
     function handleNgo(){
         setOrganization(1);
         setOffset(0);
+        setBtnClass(["small_btn set", "small_btn unset", "small_btn unset" ]);
         setOrgType("Organizacja");
         setItemsCnt(inputList[1].length);
         console.log("Organization code: ", organization);
@@ -124,6 +126,7 @@ const HomeWhoWeHelp = () => {
     function handleLocal(){
         setOrganization(2);
         setOffset(0);
+        setBtnClass(["small_btn set", "small_btn unset", "small_btn unset" ]);
         setOrgType("Zbiórka lokalna");
         setItemsCnt(inputList[2].length);
         console.log("Organization code: ", organization);
