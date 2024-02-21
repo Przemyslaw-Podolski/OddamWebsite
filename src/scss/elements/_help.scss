@@ -1,0 +1,99 @@
+.home__help{
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .help__title{
+    padding-top: 5rem;
+    font-size: 38px;
+  }
+  .help__ornament{
+    display: inline-block;
+    margin: 2rem 0 2rem 0;
+    height: 3rem;
+    width: 16rem;
+    background-image: url("../../assets/Decoration.svg");
+    background-repeat: no-repeat;
+  }
+  .help__menu{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 24px;
+    padding-bottom: 5rem;
+
+    .menu_btn{
+      line-height: 24px;
+      height: 5rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      width: 13rem;
+      background: none;
+      border: 1px $color-black solid;
+      border-radius: 0;
+      font-size: 24px;
+      font-weight: 300;
+      font-family: $font-base;
+      &:hover{
+        box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+      }
+    }
+  }
+  .help__text{
+    text-align: center;
+    font-size: 22px;
+    width: 40rem;
+    margin-bottom: 4rem;
+  }
+
+  .help__list{
+    width: 1340px;
+    font-family: $font-alt;
+    color: $color-black;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    .list__el{
+      height: 82px;
+      border-bottom: 1px $color-dark-gray solid;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .list__left{
+      .list__name{
+
+
+        font-size: 26px;
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+      }
+      .list__decs{
+        font-size: 18px;
+
+      }
+    }
+    .list__needs{
+      padding-top: 2rem;
+      font-size: 18px;
+    }
+  }
+
+  .small__container{
+    .small_btn{
+      background: none;
+      font-size: 18px;
+      height: 50px;
+      width: 40px;
+      border: solid 1px $color-black;
+      margin: 0.5rem;
+      &:hover{
+        box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+      }
+    }
+  }
+
+
+}

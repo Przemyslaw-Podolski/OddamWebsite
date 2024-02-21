@@ -3,6 +3,7 @@ const HomeWhoWeHelp = () => {
     const [organization, setOrganization] = useState(0);
     const [offset, setOffset] = useState(0);
     const [itemsCnt, setItemsCnt] = useState(9);
+    const [orgType, setOrgType] = useState("Fundacja");
 
     const charityList = [
         {
@@ -106,6 +107,7 @@ const HomeWhoWeHelp = () => {
     function handleCharity(){
         setOrganization(0);
         setOffset(0);
+        setOrgType("Fundacja");
         setItemsCnt(inputList[0].length);
         console.log("Organization code: ", organization);
     }
@@ -113,6 +115,7 @@ const HomeWhoWeHelp = () => {
     function handleNgo(){
         setOrganization(1);
         setOffset(0);
+        setOrgType("Organizacja");
         setItemsCnt(inputList[1].length);
         console.log("Organization code: ", organization);
     }
@@ -120,6 +123,7 @@ const HomeWhoWeHelp = () => {
     function handleLocal(){
         setOrganization(2);
         setOffset(0);
+        setOrgType("Zbiórka lokalna");
         setItemsCnt(inputList[2].length);
         console.log("Organization code: ", organization);
     }
@@ -136,8 +140,6 @@ const HomeWhoWeHelp = () => {
         setOffset(6);
     }
 
-
-
     return(
         <div className="home__help">
             <h2 className="help__title">Komu pomagamy?</h2>
@@ -150,20 +152,27 @@ const HomeWhoWeHelp = () => {
             <p className="help__text">W naszej bazie znajdziesz listę zweryfikowanych Fundacji,
                 z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</p>
             <div className="help__list">
-                <div className="list__element1">
-                    <h5>{inputList[organization][offset].name}</h5>
-                    <p>{inputList[organization][offset].goal}</p>
-                    <p>{inputList[organization][offset].needs}</p>
+                <div className="list__element1 list__el">
+                    <div className="list__left">
+                        <h5 className="list__name">{orgType}: "{inputList[organization][offset].name}"</h5>
+                        <p className="list__desc">{inputList[organization][offset].goal}</p>
+                    </div>
+                    <p className="list__needs">{inputList[organization][offset].needs}</p>
+
                 </div>
-                <div className="list__element1">
-                    <h5>{inputList[organization][offset + 1].name}</h5>
-                    <p>{inputList[organization][offset + 1].goal}</p>
-                    <p>{inputList[organization][offset + 1].needs}</p>
+                <div className="list__element1 list__el">
+                    <div className="list__left">
+                        <h5 className="list__name">{orgType}: "{inputList[organization][offset + 1].name}"</h5>
+                        <p className="list__desc">{inputList[organization][offset + 1].goal}</p>
+                    </div>
+                    <p className="list__needs">{inputList[organization][offset + 1].needs}</p>
                 </div>
-                <div className="list__element1">
-                    <h5>{inputList[organization][offset + 2].name}</h5>
-                    <p>{inputList[organization][offset + 2].goal}</p>
-                    <p>{inputList[organization][offset + 2].needs}</p>
+                <div className="list__element1 list__el">
+                    <div className="list__left">
+                        <h5 className="list__name">{orgType}: "{inputList[organization][offset + 2].name}"</h5>
+                        <p className="list__desc">{inputList[organization][offset + 2].goal}</p>
+                    </div>
+                    <p className="list__needs">{inputList[organization][offset + 2].needs}</p>
                 </div>
             </div>
             {itemsCnt > 6 ?

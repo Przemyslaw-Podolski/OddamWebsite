@@ -9,15 +9,15 @@ const HomeHeader = () =>{
     }
 
     function handleONas(){
-        scroll.scrollTo(2400);
+        scroll.scrollTo(2040);
     }
 
     function handleNGOs(){
-        scroll.scrollTo(2950);
+        scroll.scrollTo(2980);
     }
 
     function handleContact(){
-        scroll.scrollTo(3360);
+        scroll.scrollTo(4000);
     }
 
     return(
