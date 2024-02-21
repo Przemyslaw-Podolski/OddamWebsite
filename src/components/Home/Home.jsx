@@ -4,6 +4,7 @@ import HomeSimpleSteps from "./HomeSimpleSteps";
 import React from "react";
 import HomeAbout from "./HomeAbout";
 import HomeContact from "./HomeContact";
+import HomeWhoWeHelp from "./HomeWhoWeHelp";
 
 const Home = () =>{
     return(
@@ -12,6 +13,7 @@ const Home = () =>{
             <HomeThreeColumns />
             <HomeSimpleSteps />
             <HomeAbout />
+            <HomeWhoWeHelp />
             <HomeContact />
         </div>
     )
