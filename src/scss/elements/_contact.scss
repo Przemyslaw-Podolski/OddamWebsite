@@ -36,6 +36,17 @@
       background-repeat: no-repeat;
     }
 
+    .contact__success{
+      position: absolute;
+      bottom: 22rem;
+      left: 14rem;
+      word-wrap: break-word;
+      color: #159015;
+      font-size: 22px;
+      font-weight: bold;
+      width: 400px;
+    }
+
     .contact__form{
       display: flex;
       flex-direction: column;
@@ -48,21 +59,34 @@
         flex-direction: row;
         flex-wrap: wrap;
 
+        .error{
+          padding-top: 0.7rem;
+          color: red;
+        }
+
+
         input{
           padding-top: 1rem;
           padding-bottom: 0.2rem;
           border: none;
-          border-bottom: $color-gray 1.2px solid;
           width: 17rem;
           margin-top: 0.6rem;
           font-size: 18px;
           color: $color-gray;
         }
+        .input__ok{
+          border-bottom: $color-gray 1.2px solid;
+        }
+        .input__error{
+          border-bottom: red 1.2px solid;
+        }
+
         .form__name{
           text-align: left;
           width: 50%;
           display: flex;
           flex-direction: column;
+
         }
         .form__email{
           text-align: left;
