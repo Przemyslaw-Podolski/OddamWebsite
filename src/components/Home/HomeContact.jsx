@@ -18,6 +18,17 @@ const HomeContact = () => {
 
     const finishSubmit = () => {
         console.log(inputFields);
+
+        fetch('https://fer-api.coderslab.pl/v1/portfolio/contact', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(inputFields)
+        }).then(res => res.json())
+            .then(res => console.log(res));
+
     };
 
     useEffect(() => {
