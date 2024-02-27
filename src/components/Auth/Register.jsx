@@ -45,7 +45,7 @@ const Register = () =>{
             newInputClasses[0] = "input__error";
         }
         if (!inputValues.password || inputValues.password.length < 6) {
-            errors.password = "Message has to be longer that 120 chars";
+            errors.password = "Password must have at least 6 characters";
             newInputClasses[1] = "input__error";
         }
         if (!inputValues.password2 || inputValues.password2 !== inputValues.password) {
@@ -69,7 +69,7 @@ const Register = () =>{
                     <Link to='/rejestracja' className={"nav__element"}>Załóż konto</Link>
                 </nav>
                 <ul className="nav__menu">
-                    <li className={"nav__element"}>Start</li>
+                    <li className={"nav__element"} onClick={handleLink}>Start</li>
                     <li className={"nav__element"} onClick={handleLink}>O co chodzi?</li>
                     <li className={"nav__element"} onClick={handleLink}>O nas</li>
                     <li className={"nav__element"} onClick={handleLink}>Fundacja i organizacja</li>

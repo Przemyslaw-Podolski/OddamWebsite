@@ -1,16 +1,56 @@
 import { Link, useNavigate } from "react-router-dom";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { animateScroll as scroll } from "react-scroll";
 
 const Login = () =>{
     const navigate = useNavigate();
-    function handleSubmit (){
-        console.log("Submit login");
-    }
+    const [inputFields, setInputFields] = useState({
+        email: "",
+        password: "",
+    });
+    const [errors, setErrors] = useState({});
+    const [submitting, setSubmitting] = useState(false);
+    const [inputClass, setInputClass] = useState(["input__ok","input__ok"]);
 
-    function handleChange(){
-        console.log("Change email");
-    }
+    const handleSubmit = (event) => {
+        console.log("Submit");
+        event.preventDefault();
+        setErrors(validateValues(inputFields));
+        setSubmitting(true);
+    };
+
+    const finishSubmit = () => {
+        console.log(inputFields);
+
+    };
+
+    useEffect(() => {
+        if (Object.keys(errors).length === 0 && submitting) {
+            finishSubmit();
+
+        }
+    }, [errors]);
+
+    const handleChange = (e) => {
+        setInputFields({ ...inputFields, [e.target.name]: e.target.value });
+    };
+
+    const validateValues = (inputValues) => {
+        let errors = {};
+        let newInputClasses = ["input__ok", "input__ok", "input__ok"];
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(inputValues.email)) {
+            errors.email = "Invalid email address";
+            newInputClasses[0] = "input__error";
+        }
+        if (!inputValues.password || inputValues.password.length < 6) {
+            errors.password = "Password must have at least 6 characters";
+            newInputClasses[1] = "input__error";
+        }
+        setInputClass(newInputClasses);
+        return errors;
+    };
 
     function handleLink(){
         navigate('/');
@@ -24,7 +64,7 @@ const Login = () =>{
                     <Link to='/rejestracja' className={"nav__element"}>Załóż konto</Link>
                 </nav>
                 <ul className="nav__menu">
-                    <li className={"nav__element"}>Start</li>
+                    <li className={"nav__element"} onClick={handleLink}>Start</li>
                     <li className={"nav__element"} onClick={handleLink}>O co chodzi?</li>
                     <li className={"nav__element"} onClick={handleLink}>O nas</li>
                     <li className={"nav__element"} onClick={handleLink}>Fundacja i organizacja</li>
@@ -48,7 +88,13 @@ const Login = () =>{
                                     id="email"
                                     name="email"
                                     onChange={handleChange}
+                                    className={inputClass[0]}
                                 />
+                                {errors.email ? (
+                                    <p className="error">
+                                        Podany email jest nie prawidłowy!
+                                    </p>
+                                ) : null}
                             </div>
                             <div className="form__email">
                                 <label htmlFor="password">Hasło</label>
@@ -57,14 +103,20 @@ const Login = () =>{
                                     id="password"
                                     name="password"
                                     onChange={handleChange}
+                                    className={inputClass[1]}
                                 />
+                                {errors.password ? (
+                                    <p className="error">
+                                        Podane hasło jest za krótkie!
+                                    </p>
+                                ) : null}
                             </div>
                         </div>
+                        <div className="form__buttons">
+                            <Link to='/rejestracja' className={"nav__element"}>Załóż konto</Link>
+                            <button className="form__button" type="submit" value="Zaloguj">Zaloguj się</button>
+                        </div>
                     </form>
-                    <div className="form__buttons">
-                        <Link to='/rejestracja' className={"nav__element"}>Załóż konto</Link>
-                        <button className="form__button" type="submit" value="Zaloguj">Zaloguj się</button>
-                    </div>
                 </div>
             </div>
         </div>
