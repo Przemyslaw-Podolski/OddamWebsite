@@ -42,7 +42,7 @@ const Login = () =>{
                           className="login__form">
                         <div className="form__container">
                             <div className="form__email">
-                                <label htmlFor="email">Wpisz swój email</label>
+                                <label htmlFor="email">Email</label>
                                 <input
                                     type="email"
                                     id="email"
@@ -51,7 +51,7 @@ const Login = () =>{
                                 />
                             </div>
                             <div className="form__email">
-                                <label htmlFor="password">Wpisz hasło</label>
+                                <label htmlFor="password">Hasło</label>
                                 <input
                                     type="password"
                                     id="password"

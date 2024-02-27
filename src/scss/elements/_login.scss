@@ -26,7 +26,7 @@
   .nav__menu {
     padding-left: 2rem;
     text-align: right;
-    margin-bottom: 20vh;
+    margin-bottom: 10vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -49,8 +49,16 @@
 
   .login__body{
     text-align: center;
-    font-size: 2.4rem;
+    font-size: 2.1rem;
     color: $color-black;
+    .title__container{
+      width: 100%;
+      text-align: center;
+      .login__title{
+        width: 12em;
+        display: inline-block;
+      }
+    }
     .login__ornament{
       margin: 2rem 0 2rem 0;
       display: inline-block;
@@ -61,15 +69,84 @@
     }
     .login__form__container{
       display: flex;
-      justify-content: center;
-      width: 60%;
+      flex-direction: column;
+      align-items: center;
+      width: 18em;
       margin: auto;
       .login__form{
-        width: 90%;
+        width: 80%;
         background-color: $color-light-gray;
+        text-align: center;
+        margin-bottom: 1.5em;
+        .form__container{
+          display: inline-block;
+          width: 70%;
+          padding-top: 1em;
+          padding-bottom: 2em;
+          .form__email{
+            display: flex;
+            flex-direction: column;
+            font-size: 0.6em;
+            font-weight: 500;
+            label{
+              width: 100%;
+              text-align: left;
+              margin-top: 1em;
+              margin-bottom: 1em;
+            }
+            input{
+              width: 100%;
+              height: 3em;
+              margin-bottom: 1em;
+              background-color: transparent;
+              border: none;
+              border-bottom: 1px solid $color-gray;
+              &:focus {
+                outline: none;
+              }
+            }
+          }
+        }
+      }
+      .form__buttons{
+        margin-bottom: 3em;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        color: $color-gray;
+        align-items: center;
+        .nav__element{
+          text-decoration: none;
+          color: inherit;
+          font-size: 0.61em;
+        }
+        .form__button{
+          color: inherit;
+          border: 1px solid $color-gray;
+          width: 8em;
+          height: 3em;
+          font-size: 0.61em;
+          background-color: transparent;
+          &:hover{
+            cursor: pointer;
+          }
+        }
       }
     }
-
-
-
   }
+
+.main__btn{
+  font-family: $font-base;
+  font-weight: 200;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid $color-gray;
+  width: 8em;
+  height: 3em;
+  font-size: 1em;
+  background-color: transparent;
+  &:hover{
+    cursor: pointer;
+  }
+}
