@@ -27,7 +27,7 @@
         padding: 0.5rem;
         color: $color-gray;
         text-decoration: none;
-        font-size: 14px;
+        font-size: 0.9rem;
         &:hover{
           outline: 1px  $color-yellow solid;
         }
@@ -37,7 +37,7 @@
     .nav__menu{
       padding-left: 2rem;
       text-align: right;
-      margin-bottom: 12rem;
+      margin-bottom: 20vh;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -47,7 +47,7 @@
         padding: 0.7rem;
         color: $color-gray;
         text-decoration: none;
-        font-size: 18px;
+        font-size: 1.15rem;
         &:hover{
           outline: 1px  $color-gray solid;
           cursor: pointer;
@@ -57,7 +57,7 @@
     }
     .header__body{
       text-align: center;
-      font-size: 38px;
+      font-size: 2.4rem;
       color: $color-black;
       .header__ornament{
         margin: 2rem 0 2rem 0;
@@ -79,8 +79,8 @@
           font-weight: 300;
           color: $color-black;
           text-align: center;
-          width: 310px;
-          height: 120px;
+          width: 17vw;
+          height: 13vh;
           border: solid 1px $color-black;
           text-decoration: none;
 
