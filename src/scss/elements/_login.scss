@@ -71,18 +71,24 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 18em;
+      width: 24em;
       margin: auto;
+
       .login__form{
         width: 80%;
-        background-color: $color-light-gray;
+
         text-align: center;
         margin-bottom: 1.5em;
         .form__container{
+          background-color: $color-light-gray;
           display: inline-block;
           width: 70%;
-          padding-top: 1em;
-          padding-bottom: 2em;
+          padding: 1em 2em 2em 2em;
+          margin-bottom: 1.4em;
+          .error{
+            color: red;
+            font-size: 0.6em;
+          }
           .form__email{
             display: flex;
             flex-direction: column;
@@ -97,13 +103,19 @@
             input{
               width: 100%;
               height: 3em;
-              margin-bottom: 1em;
+              margin-bottom: 0.2em;
               background-color: transparent;
               border: none;
               border-bottom: 1px solid $color-gray;
               &:focus {
                 outline: none;
               }
+            }
+            .input__error{
+              border-bottom: 1px solid red;
+            }
+            input__ok{
+              border-bottom: 1px $color-gray;
             }
           }
         }
